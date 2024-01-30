@@ -19,12 +19,13 @@ public class PlayerControoler : MonoBehaviour
         {
             Debug.Log("왼쪽 화살표 버튼 클릭");
         });
+        transform.Translate(-2,0,0);
 
         this.btnRight.onClick.AddListener(() =>
         {
             Debug.Log("오른쪽 화살표 버튼 클릭");
         });
-
+        transform.Translate(2, 0, 0);
 
     }
     void Update()
