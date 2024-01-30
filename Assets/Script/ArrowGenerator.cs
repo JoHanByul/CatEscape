@@ -24,7 +24,7 @@ public class ArrowGenerator : MonoBehaviour
     void Update()
     {
         delta += Time.deltaTime; //이전 프레임과 현재 프레임 사이 시간 
-        Debug.Log(delta); 
+        //Debug.Log(delta); 
         if(delta > 3) 
         {
             //생성

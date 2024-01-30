@@ -1,13 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControoler : MonoBehaviour
 {
+    [SerializeField] private CatEscapeGameDirector gameDirector;
+    [SerializeField] private Button btnLeft;
+    [SerializeField] private Button btnRight;
 
       public float radius = 1f;
 
+    private void Start()
+    {
+        //this.btnLeft.onClick.AddListener(this.LeftButtonClick);
+        //this.btnLeft.onClick.AddListener(this.RightButtonClick);
+        this.btnLeft.onClick.AddListener(() =>
+        {
+            Debug.Log("왼쪽 화살표 버튼 클릭");
+        });
 
+        this.btnRight.onClick.AddListener(() =>
+        {
+            Debug.Log("오른쪽 화살표 버튼 클릭");
+        });
+
+
+    }
     void Update()
     {
         //키보드 입력을 받는 코드 작성
@@ -43,5 +62,14 @@ public class PlayerControoler : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(this.transform.position, this.radius);
+    }
+    public void LeftButtonClick()
+    {
+        Debug.Log("Left Button Clicked!");
+    }
+
+    public void RightButtonClick()
+    {
+        Debug.Log("Right Button Clicked!");
     }
 }

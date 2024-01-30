@@ -5,7 +5,7 @@ using UnityEngine;
 public class ArrowController : MonoBehaviour
 {
     [SerializeField] private float speed = 1f;
-    [SerializeField] private float radius = 1f;
+    [SerializeField] private float radius = 0.5f;
     //[SerializeField] private GameObject playerGo;
     //동적으로 생성되는 애는 씬에 있는거 Assign할 수 없다.
     [SerializeField] private CatEscapeGameDirector gameDirector;
@@ -26,7 +26,7 @@ public class ArrowController : MonoBehaviour
         //방향 * 속도 * 시간 자동으로 내려가는거
         Vector3 movement = Vector3.down * 1 * Time.deltaTime;
         this.transform.Translate(movement);
-        Debug.LogFormat("y :{0} ", this.transform.position.y);
+      //  Debug.LogFormat("y :{0} ", this.transform.position.y);
 
 
         //현재 y좌표가  1.38보다 작아졌을 때 씬에서 제거한다.
@@ -51,7 +51,7 @@ public class ArrowController : MonoBehaviour
 
         if(distane < sumRadius)  //충돌함 
         {
-            Debug.LogFormat("충돌함: {0}, {1}", distane, sumRadius); 
+            //Debug.LogFormat("충돌함: {0}, {1}", distane, sumRadius); 
             Destroy (this.gameObject); //씬에서 제거 
 
             this.gameDirector.DecreaseHp(); //Hp감소

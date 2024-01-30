@@ -98,4 +98,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  radius: 1
+  radius: 0.5
+  gameDirector: {fileID: 0}
