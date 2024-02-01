@@ -87,8 +87,8 @@ public class CatController : MonoBehaviour
         
         this.anim.speed = (Mathf.Abs(this.rbody.velocity.x) / 2f);
         this.gameDirector.UpdatevelocityText(this.rbody.velocity);
-      
 
+        this.transform.position = new Vector3(Mathf.Clamp(this.transform.position.x, -2.46f, 2.46f), this.transform.position.y, this.transform.position.z);
     }
 
     //Trigger모드일 경우 충돌 판정을 해주는 이벤트 함수 
@@ -98,7 +98,7 @@ public class CatController : MonoBehaviour
         //최초충돌할때 한번만 호출
         Debug.LogFormat("OnTriggerEnter2D: {0}", collision);
         //장면전환
-       // SceneManager.LoadScene("ClimbCloudclear");
+        SceneManager.LoadScene("ClimbCloud");
         
     }
 
