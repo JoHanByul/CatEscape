@@ -16,7 +16,7 @@ public class NinjaStarController : MonoBehaviour
     {
         this.transform.Rotate(0, 0, 1 *  Time.deltaTime); //회전 
         //this.transform.Translate(방향 * 속도 * 시간);
-        this.transform.Translate(Vector3.up * 1 * Time.deltaTime, Space.World); // 
+        //this.transform.Translate(Vector3.up * 1 * Time.deltaTime, Space.World); // 
 
     }
 }

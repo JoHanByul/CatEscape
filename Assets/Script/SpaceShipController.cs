@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpaceShipController : MonoBehaviour
 {
-    public float speed = 1;
+    public float speed = 1f;
 
     float horizontal;
     float vertical;
@@ -22,10 +22,16 @@ public class SpaceShipController : MonoBehaviour
         Vector3 dir = new Vector3(horizontal, vertical, 0);
         
         transform.Translate(dir * Time.deltaTime * speed);
-
-
     }
+    void BulletShot()// 우주선의 위치에 따라 총알 발사하기
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+           // GameObject bulletGo = this.BulletGenerator.CreateBullet();
 
+            //bulletGo.transform.position = this.firePoint.position;
+        }
+    }
 
 
 
