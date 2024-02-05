@@ -9,6 +9,9 @@ public class AppleCatchGameDirector : MonoBehaviour
 {
     GameObject timerText;
     GameObject pointText; 
+    float point = 0;
+    public static int applePoint = 0;
+    public static int bombPoint = 0;
 
     void Start()
     {
@@ -18,16 +21,17 @@ public class AppleCatchGameDirector : MonoBehaviour
         Debug.LogFormat("timerText: {0}", this.timerText);
         Debug.LogFormat("pointText: {0}", this.pointText);
     }
-    float point = 0;
 
     public void GetApple()
     {
         point += 100;
+        applePoint++;
         Debug.Log("100점을 얻었습니다.");
     }
     public void GetBomb()
     {
         point -= 50;
+        bombPoint++;
         Debug.Log("50점을 잃었습니다.");
     }
     private void Update()

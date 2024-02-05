@@ -51,9 +51,9 @@ public class BasketController : MonoBehaviour
         if(other.CompareTag("Apple"))
         {
             Debug.Log("µÊ¡°");
+            this.gameDirector.GetApple();
             this.audioSource.PlayOneShot(this.appleSfx);
 
-         //   this.gameDirector.GetApple();
         }
        else if (other.gameObject.tag == "Bomb")
         {
