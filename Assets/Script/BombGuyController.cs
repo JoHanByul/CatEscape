@@ -60,7 +60,11 @@ public class BombGuyController : MonoBehaviour
         if (dirX != 0) // 이동중이라면
         {
             this.rb.transform.localScale = new Vector3(dirX, 1, 1); // 방향에 따라 바라보는 위치 변경
+<<<<<<< HEAD
          //   this.anim.SetInteger("State", 1); // Run 애니메이션 실행
+=======
+            //this.anim.SetInteger("State", 1); // Run 애니메이션 실행
+>>>>>>> d640f8378b22a745cd3168b0e8f73d6545b56d8b
         }
 
         this.rb.AddForce(this.transform.right * dirX * moveforce);
