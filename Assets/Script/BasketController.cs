@@ -6,12 +6,14 @@ public class BasketController : MonoBehaviour
 {
     [SerializeField] private AudioClip appleSfx;
     [SerializeField] private AudioClip bombSfx;
+    [SerializeField] private AppleCatchGameDirector gameDirector;
 
     private AudioSource audioSource;
-   
     void Start()
     {
         this.audioSource = GetComponent<AudioSource>();
+        
+       
     }
 
     
@@ -50,14 +52,22 @@ public class BasketController : MonoBehaviour
         {
             Debug.Log("득점");
             this.audioSource.PlayOneShot(this.appleSfx);
+
+         //   this.gameDirector.GetApple();
         }
        else if (other.gameObject.tag == "Bomb")
         {
             Debug.Log("감점");
             this.audioSource.PlayOneShot(this.bombSfx);
 
+           // this.gameDirector.GetBomb();
+
         }  //if() / else if() 방법2가지라는 것.
+
+
         Destroy(other.gameObject);
     }
 }
 
+//[serializeField]에 선언하고 start에 같은 말로 또 선언하면 오류가 생김. 그 두개는 같은게 아니라 새로운게 생기는 것임.
+//find나 type으로 찾기 힘들때는 [SerailizeField]로 선언하여 작성하면 좀더 편리해짐. 
