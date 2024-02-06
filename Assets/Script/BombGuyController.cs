@@ -60,6 +60,7 @@ public class BombGuyController : MonoBehaviour
         if (dirX != 0) // 이동중이라면
         {
             this.rb.transform.localScale = new Vector3(dirX, 1, 1); // 방향에 따라 바라보는 위치 변경
+         //   this.anim.SetInteger("State", 1); // Run 애니메이션 실행
             //this.anim.SetInteger("State", 1); // Run 애니메이션 실행
         }
 
